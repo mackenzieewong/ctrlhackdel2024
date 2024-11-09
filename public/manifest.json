@@ -6,5 +6,18 @@
   "permissions": ["scripting", "storage"],
   "action": {
     "default_popup": "./index.html"
-  }
+  },
+  "content_scripts":[
+    {
+      "matches": [
+      "*://*.apnews.com/*"
+      ],
+      "css": [
+        "distract.css"
+      ],
+      "js": [
+        "distract.js"
+      ]
+    }
+  ]
 }

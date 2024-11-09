@@ -4,6 +4,7 @@ module.exports = {
     mode: "production",
     entry: {
         main: path.resolve(__dirname, "..", "src", "main.ts"),
+        distract: path.resolve(__dirname, "..", "src", "distract.ts"),
     },
     output: {
         path: path.join(__dirname, "../dist"),
