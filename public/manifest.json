@@ -13,7 +13,7 @@
         "*://*/*"
       ],
       "js": [
-        "checkSite.ts"
+        "checkSite.js"
       ]
     },
     {

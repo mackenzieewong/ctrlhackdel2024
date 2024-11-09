@@ -5,6 +5,7 @@ module.exports = {
     entry: {
         main: path.resolve(__dirname, "..", "src", "main.ts"),
         distract: path.resolve(__dirname, "..", "src", "distract.ts"),
+        checkSite: path.resolve(__dirname, "..", "src", "checkSite.ts"),
     },
     output: {
         path: path.join(__dirname, "../dist"),

@@ -6,3 +6,4 @@ $("p, :header, title").text(function(_, text) {
 });
 
 $("p, :header").wrapInner("<mark></mark>");
+
