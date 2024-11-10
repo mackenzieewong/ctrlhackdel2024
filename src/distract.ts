@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import {addGifsToOverlay} from "./popup";
 import {selectedGifUrls} from "./gifsList";
+import { addDinoOverlay } from './dinoOverlay';
+import { sitesList } from './sitesList';
 
 const angryDino = "https://i.imgur.com/uXZtDEm.png";
 const angrierDino = "https://i.imgur.com/Yv0oae2.png";
@@ -34,3 +36,7 @@ chrome.runtime.onMessage.addListener(function(message) {
         });
     }
 });
+
+if(!(new Set(sitesList).has(<string>$(location).attr("href")))) {
+    addDinoOverlay();
+}
