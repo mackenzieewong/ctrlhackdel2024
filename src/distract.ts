@@ -37,6 +37,6 @@ chrome.runtime.onMessage.addListener(function(message) {
     }
 });
 
-if(!(new Set(sitesList).has(<string>$(location).attr("href")))) {
+if(!(window.opener && window.opener !== window)) {
     addDinoOverlay();
 }
