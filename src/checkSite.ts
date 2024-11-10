@@ -43,7 +43,7 @@ $(function () {
 
   const relevantTagContents = extractRelevantContent();
 
-  fetch("http://localhost:3000/process-content", {
+  fetch("http://localhost:3000/judge-productive", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -28,7 +28,7 @@ app.post('/process-content', async (req, res) => {
       messages: [
         {
           "role": "system", 
-          "content": `Pretend you're a human looking at my computer screen in this situation. Only act one way. Act "cool" and "encouraging" if I'm doing something fun and cool or Act "annoying" if I'm doing something useful, educational, and productive.`
+          "content": `Pretend you're a human looking at my computer screen in this situation. Only act one way. Act "cool" and "encouraging" if I'm doing something fun and cool or Act "annoying" if I'm doing something useful, educational, and not fun.`
         },
         {
           role: 'user',
@@ -44,6 +44,37 @@ app.post('/process-content', async (req, res) => {
     return res.json({
       response: responseMessage,
     });
+  } catch (error) {
+    console.error('Error communicating with OpenAI:', error);
+    res.status(500).json({ error: 'Failed to process content' });
+  }
+});
+
+app.post('/judge-productive', async (req, res) => {
+  try {
+    const { content } = req.body;
+
+    const prompt = content.join('\n');
+
+    const chatCompletion = await openai.chat.completions.create({
+      messages: [
+        {
+          role: 'user',
+          content: `Reply only with "true" or "false"; do not write anything else: Productive means that it has words related to learning something educational and not done for fun. Unproductive websites are like games and fun content used for entertainment). Do these words: ${prompt} indicate a productive website?`,
+        },
+      ],
+      model: 'gpt-4o-mini',
+    });
+
+    const response = chatCompletion.choices[0].message.content.trim().toLowerCase();
+
+    if (response === 'true') {
+      return res.json({ response: true });
+    } else if (response === 'false') {
+      return res.json({ response: false });
+    } else {
+      throw new Error('Unexpected response from OpenAI');
+    }
   } catch (error) {
     console.error('Error communicating with OpenAI:', error);
     res.status(500).json({ error: 'Failed to process content' });
