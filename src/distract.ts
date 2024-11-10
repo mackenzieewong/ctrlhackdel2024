@@ -37,6 +37,6 @@ chrome.runtime.onMessage.addListener(function(message) {
     }
 });
 
-if(!(window.opener && window.opener !== window)) {
+if(!(location.hash == "#popup")) {
     addDinoOverlay();
 }

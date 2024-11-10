@@ -45,7 +45,7 @@ chrome.webNavigation.onCompleted.addListener(async function (page) {
 chrome.alarms.onAlarm.addListener(function (alarm) {
     if(alarm.name === "1m") {
         chrome.windows.create({
-            url: sitesList[Math.floor(Math.random() * sitesList.length)],
+            url: sitesList[Math.floor(Math.random() * sitesList.length)]+"#popup",
             type: "popup",
             height: 300,
             width: 400
