@@ -3,7 +3,7 @@
   "description": "this is a test.",
   "version": "0",
   "manifest_version": 3,
-  "permissions": ["scripting", "storage"],
+  "permissions": ["alarms", "scripting", "storage"],
   "action": {
     "default_popup": "./index.html"
   },
@@ -24,6 +24,7 @@
         "distract.css"
       ],
       "js": [
+        "pageTimer.js",
         "distract.js"
       ]
     },
