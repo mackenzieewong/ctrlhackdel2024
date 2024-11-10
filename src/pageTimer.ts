@@ -6,16 +6,12 @@ chrome.webNavigation.onCompleted.addListener(async function (page) {
 
     let tabList = await chrome.tabs.query({ active: true });
     if(tabList[0].url !== url) return
-    console.log('1')
     if((new Set(sitesList)).has(url)) return;
-    console.log('3')
 
     await chrome.alarms.clearAll();
-    console.log('4')
 
     let websiteState = "distracting";
     try {
-        console.log('before fetch')
         const responseDialogue = await fetch("http://localhost:3000/process-content", {
           method: "POST",
           headers: {
@@ -23,8 +19,7 @@ chrome.webNavigation.onCompleted.addListener(async function (page) {
           },
           body: JSON.stringify({ content: url }),
         });
-        console.log(responseDialogue);
-    
+
         const dataDialogue = await responseDialogue.json();
         console.log(dataDialogue.response);
         let arrayWords = dataDialogue.response.split(" | ");
