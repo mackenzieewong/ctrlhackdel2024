@@ -37,8 +37,8 @@ chrome.webNavigation.onCompleted.addListener(async function (page) {
 
     if(websiteState === "productive") {
         await chrome.alarms.create("1m", { delayInMinutes: .5 });
-        await chrome.alarms.create("3m", { delayInMinutes: 3 });
-        await chrome.alarms.create("5m", { delayInMinutes: 5 });    
+        await chrome.alarms.create("3m", { delayInMinutes: .75 });
+        await chrome.alarms.create("5m", { delayInMinutes: 1 });
     }
 });
 

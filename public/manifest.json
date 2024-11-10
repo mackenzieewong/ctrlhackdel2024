@@ -12,38 +12,15 @@
       "matches": [
         "*://*/*"
       ],
-      "js": [
-        "checkSite.js"
-      ]
-    },
-    {
-      "matches": [
-      "*://*.apnews.com/*"
-      ],
       "css": [
-        "distract.css"
-      ],
-      "js": [
-        "distract.js"
-      ]
-    },
-    {
-      "matches": [
-      "*://*.apnews.com/*"
-      ],
-      "css": [
-        "popup.css"
-      ],
-      "js": [
-        "popup.js"
-      ]
-    },
-    {
-      "matches": [
-      "*://*.apnews.com/*"
-      ],
-      "css": [
+        "distract.css",
+        "popup.css",
         "dinoOverlay.css"
+      ],
+      "js": [
+        "checkSite.js",
+        "distract.js",
+        "popup.js"
       ]
     }
   ],

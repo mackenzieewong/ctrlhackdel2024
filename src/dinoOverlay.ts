@@ -12,8 +12,6 @@ const speechBubble = "https://i.imgur.com/G0hFWOJ.png";
 const dinoImage = normalDino; // hardcode default to not angry dino 
 
 
-
-
 export const addDinoOverlay = () => {
     const container = document.createElement("div");
     container.classList.add("container");

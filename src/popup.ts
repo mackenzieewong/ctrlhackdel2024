@@ -9,7 +9,7 @@ gifContainer.classList.add("gif-overlay-container");
 document.body.appendChild(gifContainer);
 
 // Function to create and add GIF elements with random size
-const addGifsToOverlay = (gifUrls: string[]) => {
+export const addGifsToOverlay = (gifUrls: string[]) => {
   gifUrls.forEach((url, index) => {
     const gif = document.createElement("img");
     gif.src = url;
@@ -42,8 +42,3 @@ const addGifsToOverlay = (gifUrls: string[]) => {
     console.log(`GIF added to the container with index ${index}`);
   });
 };
-
-// Call function to add GIFs to overlay
-console.log("Starting GIF overlay process");
-addGifsToOverlay(gifUrls);
-console.log("addGifsToOverlay function executed");

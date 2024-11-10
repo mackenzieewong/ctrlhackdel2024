@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import {addDinoOverlay} from "./dinoOverlay";
+import {addGifsToOverlay} from "./popup";
+import {selectedGifUrls} from "./gifsList";
 
 const angryDino = "https://i.imgur.com/uXZtDEm.png";
 const angrierDino = "https://i.imgur.com/Yv0oae2.png";
@@ -13,6 +14,7 @@ chrome.runtime.onMessage.addListener(function(message) {
             $(".dino").each(function() {
                 (<HTMLImageElement>this).src = angryDino;
             });
+            addGifsToOverlay(selectedGifUrls)
         }
         if(message.time === "5m") {
             $("p, :header, title").text(function(_, text) {
