@@ -1,5 +1,4 @@
 import { selectedGifUrls } from './gifsList';
-import { addDinoOverlay } from './dinoOverlay';
 
 const gifUrls = selectedGifUrls; // Use selectedGifUrls as gifUrls
 console.log(selectedGifUrls); // Log selected URLs
@@ -48,8 +47,3 @@ const addGifsToOverlay = (gifUrls: string[]) => {
 console.log("Starting GIF overlay process");
 addGifsToOverlay(gifUrls);
 console.log("addGifsToOverlay function executed");
-
-// Add the dino static image overlay (at the bottom right)
-addDinoOverlay(); // Call the function from dinoOverlay.ts
-console.log("addDinoOverlay function executed");
-
