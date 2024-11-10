@@ -58,7 +58,7 @@ app.post('/judge-productive', async (req, res) => {
       messages: [
         {
           role: 'user',
-          content: `Reply only with "true" or "false"; do not write anything else: Productive means that the URL is related to learning something educational and not done for fun. Distracting websites are like games and fun content used for entertainment. Does ${content} indicate a productive or distracting website?`,
+          content: `Reply only with "productive" or "distracting"; do not write anything else: Productive means that the URL is related to learning something educational and not done for fun. Distracting websites are like games and fun content used for entertainment. Does ${content} indicate a productive or distracting website?`,
         },
       ],
       model: 'gpt-4o-mini',
