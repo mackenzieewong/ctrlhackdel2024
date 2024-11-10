@@ -32,6 +32,3 @@ chrome.runtime.onMessage.addListener(function(message) {
         });
     }
 });
-
-addDinoOverlay();
-console.log("addDinoOverlay function executed");
