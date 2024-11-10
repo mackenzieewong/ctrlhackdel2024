@@ -7,7 +7,6 @@ module.exports = {
         distract: path.resolve(__dirname, "..", "src", "distract.ts"),
         checkSite: path.resolve(__dirname, "..", "src", "checkSite.ts"),
         popup: path.resolve(__dirname, "..", "src", "popup.ts"),
-        dinoOverlay: path.resolve(__dirname, "..", "src", "dinoOverlay.ts"),
         pageTimer: path.resolve(__dirname, "..", "src", "pageTimer.ts"),
     },
     output: {
