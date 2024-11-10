@@ -1,19 +1,10 @@
 // Function to create and add the static 'dino' image overlay at the bottom-right
-import checkSite from "./checkSite";
 
 const normalDino = "https://i.imgur.com/40oGV3K.png"; 
 const angryDino = "https://i.imgur.com/uXZtDEm.png";
 const angrierDino = "https://i.imgur.com/Yv0oae2.png";
 
 let dialogue: string = "";
-
-checkSite().then((result) => {
-  dialogue = result;  
-  console.log(dialogue); 
-  addDinoOverlay();
-}).catch((error) => {
-  console.error("Error fetching dialogue:", error);
-});
 
 
 const speechBubble = "https://i.imgur.com/G0hFWOJ.png"; 
