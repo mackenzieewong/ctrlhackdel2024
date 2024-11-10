@@ -26,6 +26,17 @@
       "js": [
         "distract.js"
       ]
+    },
+    {
+      "matches": [
+      "*://*.apnews.com/*"
+      ],
+      "css": [
+        "popup.css"
+      ],
+      "js": [
+        "popup.js"
+      ]
     }
   ]
 }

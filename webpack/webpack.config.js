@@ -6,6 +6,7 @@ module.exports = {
         main: path.resolve(__dirname, "..", "src", "main.ts"),
         distract: path.resolve(__dirname, "..", "src", "distract.ts"),
         checkSite: path.resolve(__dirname, "..", "src", "checkSite.ts"),
+        popup: path.resolve(__dirname, "..", "src", "popup.ts"),
     },
     output: {
         path: path.join(__dirname, "../dist"),
