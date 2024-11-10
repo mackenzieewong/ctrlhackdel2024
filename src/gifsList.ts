@@ -8,7 +8,7 @@ const fullGifUrls: string[] = [
     "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzdub2Y1OWgwMGFud203dzA1MjBtcTR6eWRqbjIzeDg2Y2RzbDRxbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nR4L10XlJcSeQ/giphy.gif", // cat shaking head no 
     "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnIyc3FvN2g4aGo4cTVpYWZycjNkcTd5em01N2VncHcza2hyOTNoYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zKRlxWqdP4NTok3Ppl/giphy.gif", // goku
     "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnIyc3FvN2g4aGo4cTVpYWZycjNkcTd5em01N2VncHcza2hyOTNoYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zKRlxWqdP4NTok3Ppl/giphy.gif", // old man hula hoop onion ring
-    "https://tenor.com/view/deep-fried-gif-27146636", // deep fried do not
+    "https://imgur.com/uXZtDEm", // homer running in field
     "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHU5d3JkYzBscHhtbWk2cGVmMnYyczNpYTNxenV4c2g1cHZqbXAzOSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/CAYVZA5NRb529kKQUc/giphy.gif", // gigachad guy
     "https://media.giphy.com/media/F0st07VOJ5fpjVZHJ5/giphy.gif?cid=790b76118u9wrdc0lpxmmi6pef2v2s3ia3qzuxsh5pvjmp39&ep=v1_gifs_search&rid=giphy.gif&ct=g", // buff penguin
     "https://www.icegif.com/wp-content/uploads/2024/06/mewing-icegif-2.gif", // cat mewing
@@ -65,7 +65,7 @@ const shuffleArray = (array: string[]): string[] => {
   const selectRandomGifs = (fullGifUrls: string[]): string[] => {
     // Shuffle the array and slice the first 6 items
     const shuffled = shuffleArray([...fullGifUrls]);
-    return shuffled.slice(0, 8);
+    return shuffled.slice(0, 6);
   };
 
 // Export randomized selection of GIFs

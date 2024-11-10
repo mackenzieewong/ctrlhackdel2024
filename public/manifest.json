@@ -37,6 +37,17 @@
       "js": [
         "popup.js"
       ]
+    },
+    {
+      "matches": [
+      "*://*.apnews.com/*"
+      ],
+      "css": [
+        "dinoOverlay.css"
+      ],
+      "js": [
+        "dinoOverlay.js"
+      ]
     }
   ]
 }
