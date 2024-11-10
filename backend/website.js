@@ -21,18 +21,18 @@ app.post('/process-content', async (req, res) => {
     const { content } = req.body;
 
 
-    const prompt = content.join('\n');
+
 
 
     const chatCompletion = await openai.chat.completions.create({
       messages: [
         {
           "role": "system", 
-          "content": `Pretend you're a human looking at my computer screen in this situation. Only act one way. Act "cool" and "encouraging" if I'm doing something fun and cool or Act "annoying" if I'm doing something useful, educational, and not fun.`
+          "content": `Read these instructions and understand them. Only acknowledge that you've understood in your attitude. I will present a URL to a website. You must act with whether or not you think that URL is "productive" or "distracting". Productive means that the URL is related to learning something educational and not done for fun. Distracting websites are like games and fun content used for entertainment. Act annoying and belittle me if you decide it is "productive". Otherwise, act encouraging and cool if you decide it is "distracting". You cannot act both annoying and cool.`
         },
         {
           role: 'user',
-          content: `Imagine the website has these words : ${prompt}. Hey come look at what I'm doing.`,
+          content: `URL: ${content}`,
         },
       ],
       model: 'gpt-4o-mini',
@@ -54,13 +54,11 @@ app.post('/judge-productive', async (req, res) => {
   try {
     const { content } = req.body;
 
-    const prompt = content.join('\n');
-
     const chatCompletion = await openai.chat.completions.create({
       messages: [
         {
           role: 'user',
-          content: `Reply only with "true" or "false"; do not write anything else: Productive means that it has words related to learning something educational and not done for fun. Unproductive websites are like games and fun content used for entertainment). Do these words: ${prompt} indicate a productive website?`,
+          content: `Reply only with "true" or "false"; do not write anything else: Productive means that the URL is related to learning something educational and not done for fun. Distracting websites are like games and fun content used for entertainment. Does ${content} indicate a productive or distracting website?`,
         },
       ],
       model: 'gpt-4o-mini',
