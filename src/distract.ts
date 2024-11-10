@@ -1,14 +1,18 @@
 import $ from 'jquery';
 
-chrome.alarms.onAlarm.addListener(function (alarm) {
-    if(alarm.name === "1m") {
+
+chrome.runtime.onMessage.addListener(function(message) {
+    if(message.time === "1m") {
         $("p, :header, title").text(function(_, text) {
             return text.replace(/./g, "▮");
         });
+
         $("p, :header").wrapInner("<mark></mark>");
     }
-    console.log(`${alarm.name} alarm triggered`);
-});
+    console.log(`${message.time} alarm triggered`);
+})
+
+
 
 
 

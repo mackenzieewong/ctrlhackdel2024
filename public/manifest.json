@@ -3,7 +3,7 @@
   "description": "this is a test.",
   "version": "0",
   "manifest_version": 3,
-  "permissions": ["alarms", "scripting", "storage"],
+  "permissions": ["alarms", "scripting", "storage", "webNavigation"],
   "action": {
     "default_popup": "./index.html"
   },
@@ -24,7 +24,6 @@
         "distract.css"
       ],
       "js": [
-        "pageTimer.js",
         "distract.js"
       ]
     },
@@ -50,5 +49,8 @@
         "dinoOverlay.js"
       ]
     }
-  ]
+  ],
+  "background": {
+    "service_worker": "pageTimer.js"
+  }
 }
