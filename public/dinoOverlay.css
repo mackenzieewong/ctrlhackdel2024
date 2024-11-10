@@ -1,12 +1,12 @@
 .dino {
-    position: fixed;
+    position: relative;
     width: 300px;
     height: 300px;
     object-fit: contain;
   }
 
   .dino-container {
-    position: fixed;
+    position: relative;
     bottom: 20px;
     right: 30px;
     width: 300px;
@@ -30,6 +30,8 @@
     text-align: center;
     transform: translate(-50%, -47%);
     z-index: 3;
+    line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   .text-container {
@@ -43,11 +45,14 @@
     z-index: 2;
   }
 
-  .container {
+  .overlay-container {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     width: 300px;
     height: 525px;
     bottom: 0px;
     right: 0px;
-    align-items: center;
+    align-items: flex-end;
+    z-index: 99999999;
   }
