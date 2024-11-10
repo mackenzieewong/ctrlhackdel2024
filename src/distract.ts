@@ -26,6 +26,3 @@ chrome.runtime.onMessage.addListener(function(message) {
     }
     console.log(`${message.time} alarm triggered`);
 });
-
-addDinoOverlay();
-console.log("addDinoOverlay function executed");
