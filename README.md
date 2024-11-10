@@ -8,7 +8,7 @@ Distractisaurus is a Chrome Extension where your dinosaur friend isn't really yo
 
 Distractisaurus was created for the **Most Useless Hack** category at **CTRL+HACK+DEL 2024**.
 
-[link]https://i.imgur.com/wVx3zMu.png
+![Preview of the extension]https://i.imgur.com/wVx3zMu.png
 
 ## Steps
 1. Clone the repo
